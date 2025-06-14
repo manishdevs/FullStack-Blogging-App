@@ -4,9 +4,7 @@ EXPOSE 8080
 
 ENV APP_HOME /usr/src/app
 
-COPY target/*.jar $APP_HOME/
-
-RUN sh -c 'mv /usr/src/app/*.jar /usr/src/app/app.jar'
+COPY target/*.jar $APP_HOME/app.jar
 
 WORKDIR $APP_HOME
 
